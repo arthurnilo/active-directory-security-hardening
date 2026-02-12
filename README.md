@@ -28,50 +28,50 @@ Extract password hashes
 Abuse service accounts
 
 3. Common Active Directory Attacks
-3.1 Brute Force
-Repeated authentication attempts to guess credentials.
+  3.1 Brute Force
+  Repeated authentication attempts to guess credentials.
 
-Detection:
-Multiple failed login attempts (Event ID 4625)
+  Detection:
+  Multiple failed login attempts (Event ID 4625)
 
-Mitigation:
-Account lockout policies
-Strong password policies
+  Mitigation:
+  Account lockout policies
+  Strong password policies
 
-3.2 Pass-the-Hash
-Attackers reuse NTLM password hashes to authenticate without knowing the plaintext password.
+  3.2 Pass-the-Hash
+  Attackers reuse NTLM password hashes to authenticate without knowing the plaintext password.
 
-Detection:
-Suspicious authentication patterns
-Logon type anomalies
+  Detection:
+  Suspicious authentication patterns
+  Logon type anomalies
 
-Mitigation:
-Disable NTLM where possible
-Credential Guard
-Least privilege enforcement
+  Mitigation:
+  Disable NTLM where possible
+  Credential Guard
+  Least privilege enforcement
 
-3.3 Kerberoasting
-Attackers request service tickets for service accounts and attempt offline password cracking.
+  3.3 Kerberoasting
+  Attackers request service tickets for service accounts and attempt offline password cracking.
 
-Detection:
-High volume of TGS requests (Event ID 4769)
-Requests targeting high-privilege service accounts
+  Detection:
+  High volume of TGS requests (Event ID 4769)
+  Requests targeting high-privilege service accounts
 
-Mitigation:
-Strong passwords for service accounts
-Use of Managed Service Accounts
+  Mitigation:
+  Strong passwords for service accounts
+  Use of Managed Service Accounts
 
-3.4 Privilege Escalation
-Gaining elevated permissions through misconfiguration or credential abuse.
+  3.4 Privilege Escalation
+  Gaining elevated permissions through misconfiguration or credential abuse.
 
-Detection:
-Event ID 4672 (Special privileges assigned)
-Changes to privileged groups (Event ID 4728, 4732)
+  Detection:
+  Event ID 4672 (Special privileges assigned)
+  Changes to privileged groups (Event ID 4728, 4732)
 
-Mitigation:
-Monitor privileged groups
-Apply least privilege principle
-Regular auditing
+  Mitigation:
+  Monitor privileged groups
+  Apply least privilege principle
+  Regular auditing
 
 4. Log Analysis & Monitoring Strategy
 
